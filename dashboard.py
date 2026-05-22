@@ -838,7 +838,7 @@ with tab1:
     def color_row(row):
         s = float(row['만족도'].replace('점',''))
         c = '#ffebe9' if s < 50 else '#dafbe1' if s >= 75 else '#ddf4ff'
-        return [f'background-color:{c};color:#1f2328']*len(row))
+        return [f'background-color:{c};color:#1f2328']*len(row)
 
     st.dataframe(
         df.style.apply(color_row, axis=1),
