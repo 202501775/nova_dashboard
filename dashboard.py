@@ -41,31 +41,31 @@ st.set_page_config(
 st.markdown("""
 <style>
 /* 전체 배경 */
-.stApp { background-color: #0d1117; color: #e6edf3; }
+.stApp { background-color: #ffffff; color: #1f2328; }
 
 /* 사이드바 */
 [data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #161b22 0%, #0d1117 100%);
-    border-right: 1px solid #21262d;
+    background: linear-gradient(180deg, #f6f8fa 0%, #ffffff 100%);
+    border-right: 1px solid #d0d7de;
 }
-[data-testid="stSidebar"] .stSlider > div { color: #e6edf3; }
+[data-testid="stSidebar"] .stSlider > div { color: #1f2328; }
 
 /* 메트릭 카드 */
 .metric-card {
-    background: #161b22;
-    border: 1px solid #21262d;
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
     border-radius: 12px;
     padding: 20px 24px;
     text-align: center;
     transition: border-color 0.2s;
 }
-.metric-card:hover { border-color: #388bfd; }
+.metric-card:hover { border-color: #0969da; }
 .metric-card .label {
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #7d8590;
+    color: #656d76;
     margin-bottom: 8px;
 }
 .metric-card .value {
@@ -76,13 +76,13 @@ st.markdown("""
 }
 .metric-card .sub {
     font-size: 12px;
-    color: #7d8590;
+    color: #656d76;
 }
-.metric-good  { color: #3fb950; }
-.metric-warn  { color: #d29922; }
-.metric-danger{ color: #f85149; }
-.metric-blue  { color: #388bfd; }
-.metric-purple{ color: #bc8cff; }
+.metric-good  { color: #1a7f37; }
+.metric-warn  { color: #9a6700; }
+.metric-danger{ color: #cf222e; }
+.metric-blue  { color: #0969da; }
+.metric-purple{ color: #8250df; }
 
 /* 섹션 헤더 */
 .section-header {
@@ -90,70 +90,59 @@ st.markdown("""
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #7d8590;
+    color: #656d76;
     padding: 8px 0 4px;
-    border-bottom: 1px solid #21262d;
+    border-bottom: 1px solid #d0d7de;
     margin-bottom: 12px;
 }
 
 /* 경보 배너 */
 .alert-danger {
-    background: rgba(248, 81, 73, 0.12);
-    border: 1px solid rgba(248, 81, 73, 0.4);
-    border-left: 4px solid #f85149;
+    background: rgba(207, 34, 46, 0.08);
+    border: 1px solid rgba(207, 34, 46, 0.3);
+    border-left: 4px solid #cf222e;
     border-radius: 8px;
     padding: 12px 16px;
     margin: 8px 0;
-    color: #ffa198;
+    color: #82071e;
     font-size: 14px;
 }
 .alert-success {
-    background: rgba(63, 185, 80, 0.10);
-    border: 1px solid rgba(63, 185, 80, 0.3);
-    border-left: 4px solid #3fb950;
+    background: rgba(26, 127, 55, 0.08);
+    border: 1px solid rgba(26, 127, 55, 0.3);
+    border-left: 4px solid #1a7f37;
     border-radius: 8px;
     padding: 12px 16px;
     margin: 8px 0;
-    color: #56d364;
+    color: #0f5323;
     font-size: 14px;
 }
 .alert-info {
-    background: rgba(56, 139, 253, 0.10);
-    border: 1px solid rgba(56, 139, 253, 0.3);
-    border-left: 4px solid #388bfd;
+    background: rgba(9, 105, 218, 0.08);
+    border: 1px solid rgba(9, 105, 218, 0.3);
+    border-left: 4px solid #0969da;
     border-radius: 8px;
     padding: 12px 16px;
     margin: 8px 0;
-    color: #79c0ff;
+    color: #0550ae;
     font-size: 14px;
 }
 
 /* 탭 스타일 */
 .stTabs [data-baseweb="tab-list"] {
-    background: #161b22;
-    border-bottom: 1px solid #21262d;
+    background: #f6f8fa;
+    border-bottom: 1px solid #d0d7de;
     gap: 4px;
 }
 .stTabs [data-baseweb="tab"] {
-    color: #7d8590;
+    color: #656d76;
     font-weight: 600;
     font-size: 13px;
     padding: 8px 16px;
 }
 .stTabs [aria-selected="true"] {
-    color: #e6edf3 !important;
-    border-bottom: 2px solid #388bfd;
-}
-
-/* 슬라이더 색상 */
-.stSlider [data-baseweb="slider"] { padding: 4px 0; }
-
-/* 구분선 */
-hr { border-color: #21262d; margin: 16px 0; }
-
-/* 제목 */
-h1, h2, h3 { color: #e6edf3; }
-</style>
+    color: #1f2328 !important;
+    border-bottom: 2px solid #0969da;
 """, unsafe_allow_html=True)
 
 # ──────────────────────────────────────────────────
@@ -181,7 +170,7 @@ PLOT_LAYOUT = dict(
     font=dict(color=COLORS['text'], family='Inter, sans-serif', size=12),
     margin=dict(l=16, r=16, t=36, b=16),
     legend=dict(
-        bgcolor='rgba(22,27,34,0.9)',
+        bgcolor='rgba(246,248,250,0.9)',
         bordercolor=COLORS['border'],
         borderwidth=1,
         font=dict(size=11),
