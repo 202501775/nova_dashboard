@@ -556,9 +556,9 @@ def chart_district_heatmap(results_dict):
 with st.sidebar:
     st.markdown('<div style="text-align:center;padding:16px 0 8px">'
                 '<span style="font-size:28px">🏙️</span><br>'
-                '<span style="font-size:16px;font-weight:800;color:#e6edf3">'
+                '<span style="font-size:16px;font-weight:800;color:#1f2328">'
                 'NOVA시 시뮬레이터</span><br>'
-                '<span style="font-size:11px;color:#7d8590">'
+                '<span style="font-size:11px;color:#656d76">'
                 'Smart City Resource Allocator</span></div>',
                 unsafe_allow_html=True)
     st.markdown('---')
@@ -680,22 +680,22 @@ if st.session_state.result is None:
         st.markdown("""
 <div style="text-align:center;padding:60px 0">
     <div style="font-size:64px;margin-bottom:24px">🏙️</div>
-    <div style="font-size:20px;font-weight:700;color:#e6edf3;margin-bottom:12px">
+    <div style="font-size:20px;font-weight:700;color:#1f2328;margin-bottom:12px">
         시뮬레이션을 시작하세요
     </div>
-    <div style="font-size:14px;color:#7d8590;line-height:1.8">
+    <div style="font-size:14px;color:#656d76;line-height:1.8">
         왼쪽 패널에서 예산과 에너지 배분 비율을 설정하고<br>
-        <b style="color:#388bfd">▶ 시뮬레이션 실행</b> 버튼을 누르면<br>
+        <b style="color:#0969da">▶ 시뮬레이션 실행</b> 버튼을 누르면<br>
         NOVA시 5개 구역의 시민 만족도가 실시간으로 산출됩니다.
     </div>
     <div style="margin-top:32px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap">
-        <div style="background:#161b22;border:1px solid #21262d;border-radius:8px;padding:12px 20px;font-size:13px;color:#7d8590">
+        <div style="background:#f6f8fa;border:1px solid #d0d7de;border-radius:8px;padding:12px 20px;font-size:13px;color:#656d76">
             💰 예산: 복지·교육·에너지·인프라·안전
         </div>
-        <div style="background:#161b22;border:1px solid #21262d;border-radius:8px;padding:12px 20px;font-size:13px;color:#7d8590">
+        <div style="background:#f6f8fa;border:1px solid #d0d7de;border-radius:8px;padding:12px 20px;font-size:13px;color:#656d76">
             ⚡ 에너지: 태양광·수소·ESS·외부전력망
         </div>
-        <div style="background:#161b22;border:1px solid #21262d;border-radius:8px;padding:12px 20px;font-size:13px;color:#7d8590">
+        <div style="background:#f6f8fa;border:1px solid #d0d7de;border-radius:8px;padding:12px 20px;font-size:13px;color:#656d76">
             📊 출력: 5개 구역 만족도 + 자립률
         </div>
     </div>
@@ -837,8 +837,8 @@ with tab1:
 
     def color_row(row):
         s = float(row['만족도'].replace('점',''))
-        c = '#2d1b1b' if s < 50 else '#1b2d1e' if s >= 75 else '#1b1b2d'
-        return [f'background-color:{c}']*len(row)
+        c = '#ffebe9' if s < 50 else '#dafbe1' if s >= 75 else '#ddf4ff'
+        return [f'background-color:{c};color:#1f2328']*len(row))
 
     st.dataframe(
         df.style.apply(color_row, axis=1),
