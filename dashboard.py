@@ -160,19 +160,19 @@ h1, h2, h3 { color: #e6edf3; }
 # 색상 팔레트
 # ──────────────────────────────────────────────────
 COLORS = {
-    'bg':       '#0d1117',
-    'surface':  '#161b22',
-    'border':   '#21262d',
-    'text':     '#e6edf3',
-    'muted':    '#7d8590',
-    'blue':     '#388bfd',
-    'green':    '#3fb950',
-    'yellow':   '#d29922',
-    'red':      '#f85149',
-    'purple':   '#bc8cff',
-    'cyan':     '#39d353',
-    'districts': ['#388bfd','#3fb950','#d29922','#bc8cff','#f85149'],
-    'scenarios': ['#388bfd','#3fb950','#d29922','#bc8cff','#58a6ff'],
+    'bg':       '#ffffff',   # 흰 배경
+    'surface':  '#f6f8fa',   # 카드/패널 (살짝 회색)
+    'border':   '#d0d7de',   # 테두리 (밝은 회색)
+    'text':     '#1f2328',   # 본문 텍스트 (거의 검정)
+    'muted':    '#656d76',   # 보조 텍스트 (중간 회색)
+    'blue':     '#0969da',   # 라이트 모드용 진한 파랑
+    'green':    '#1a7f37',
+    'yellow':   '#9a6700',
+    'red':      '#cf222e',
+    'purple':   '#8250df',
+    'cyan':     '#1f883d',
+    'districts': ['#0969da','#1a7f37','#9a6700','#8250df','#cf222e'],
+    'scenarios': ['#0969da','#1a7f37','#9a6700','#8250df','#0550ae'],
 }
 
 PLOT_LAYOUT = dict(
