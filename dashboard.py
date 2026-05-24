@@ -564,9 +564,31 @@ with st.sidebar:
     st.markdown('---')
 
     # 프리셋 선택
+    # 프리셋 선택
     st.markdown('<div class="section-header">프리셋 시나리오</div>',
                 unsafe_allow_html=True)
-    preset_choice = st.selectbox('', list(PRESETS.keys()), label_visibility='collapsed')
+
+    # 프리셋이 바뀌면 슬라이더 값을 자동으로 덮어쓰는 콜백
+    def apply_preset():
+        p = PRESETS[st.session_state.preset_choice]
+        if p is None:
+            return
+        st.session_state.w   = p['welfare']
+        st.session_state.e   = p['education']
+        st.session_state.ei  = p['energy_infra']
+        st.session_state.gi  = p['general_infra']
+        st.session_state.s   = p['safety']
+        st.session_state.sol = p['solar']
+        st.session_state.hyd = p['hydrogen']
+        st.session_state.ess = p['ess']
+        st.session_state.ext = p['external']
+
+    preset_choice = st.selectbox(
+        '', list(PRESETS.keys()),
+        label_visibility='collapsed',
+        key='preset_choice',
+        on_change=apply_preset,
+    )
     preset = PRESETS[preset_choice]
 
     def pv(key, default):
